@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+  </head>
+  <body>
+    <h2>言語を選んでください - select language</h2>
+    <select id="lang">
+      <option>select lang</option>
+      <option>ja</option>
+      <option>en</option>
+    </select>
+    <button onclick="warp()">リポジトリに移動 - warp to repo</button>
+    <script>
+      function warp() {
+        const lang = document.getElementById("lang").value;
+        if (lang === "select lang") {
+          alert("言語を選択してください - select language");
+        } else {
+          const warpurl = "https://110v011.github.io/110v011.chrome-dino-game-repo.github.io/" + lang + "/index.html";
+          window.location.href=warpurl;
+        }
+      }
+    </script>
+  </body>
+</html>
